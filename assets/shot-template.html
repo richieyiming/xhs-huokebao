@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="sXTifN90r0F9tmyRyMU7wZ">
+<head data-page-node-id="7XlGiQg0mijnhAQGYsjYnm">
+<meta charset="UTF-8" data-page-node-id="slZwKVcL1pWsnCtPAHFU1L">
+<title>小红书贴图模板 · 6 张 1080×1440（3:4）</title>
+<style>
+  /* ==================================================================
+     用法（按顺序，别跳步）
+     1. 定品类 → 查 references/12-贴图尺寸与品类视觉方案.md 选一套视觉方案
+     2. 给 <body> 挂上对应 class（如 <body class="t-beauty">），全组 6 张一次换肤
+        · 常规 13 套：t-knowledge(默认) t-beauty t-fashion t-home t-food t-mom
+                      t-fitness t-life t-edu t-finance t-emotion t-craft t-fresh
+        · 敏感 5 套：t-guoxue t-male t-female t-medical t-health
+     3. 只改 6 个 .shot 里的文字，不动 CSS
+     4. 浏览器打开 → 对每张 .shot 单独截图（Playwright: locator('.shot').nth(i).screenshot()）
+     5. 先截第 1 张验证版式，再批量截另外 5 张（算力纪律·先小样再批量）
+     6. 输出 1080×1440 PNG，命名 01-封面.png … 06-钩子.png 放进交付包 images/
+
+     尺寸硬规范：1080×1440（3:4）· 四边安全留白 ≥96px · 底部 200px 不放文字
+                 主标题 88-104px · 副标题 44-48px · 条目 48-56px · 最小字号 ≥32px
+     ================================================================== */
+
+  /* ---------- 默认主题：知识 / IP / 商业 / 职场 ---------- */
+  :root{
+    --bg:#FAF8F4; --panel:#FFFFFF; --ink:#1D1D1F; --sub:#6E6E73;
+    --accent:#C9A84C; --accent-bg:#FBF6E9; --accent-ink:#8A6D1F;
+    --line:#E5E5EA; --radius:16px; --shadow:none;
+    --topbar:var(--accent); --serif:0;
+  }
+
+  /* ---------- 常规品类 13 套 ---------- */
+  /* 2 美妆护肤 */
+  body.t-beauty{--bg:#FFF9F7;--panel:#FFFFFF;--ink:#3A2E2B;--sub:#8E7A74;--accent:#E0A899;--accent-bg:#FBEFEC;--accent-ink:#A6604F;--line:#F1E2DE;--radius:28px;--shadow:0 8px 30px rgba(180,140,130,.10);--topbar:var(--accent)}
+  /* 3 穿搭时尚 */
+  body.t-fashion{--bg:#F6F2EC;--panel:#FFFDF9;--ink:#22201E;--sub:#7C746C;--accent:#B98A5E;--accent-bg:#F3E9DC;--accent-ink:#8A6134;--line:#E6DCCC;--radius:6px;--shadow:none;--topbar:var(--accent);--serif:1}
+  /* 4 家居家装 */
+  body.t-home{--bg:#FBF7F0;--panel:#FFFFFF;--ink:#33302B;--sub:#827A6E;--accent:#C4A484;--accent-bg:#F6EEE3;--accent-ink:#8A6E4E;--line:#EDE4D6;--radius:20px;--shadow:0 6px 24px rgba(150,120,90,.10);--topbar:var(--accent)}
+  /* 5 美食餐饮 */
+  body.t-food{--bg:#FFFBF0;--panel:#FFFFFF;--ink:#3B2F22;--sub:#8A7561;--accent:#E08A3C;--accent-bg:#FDEEDC;--accent-ink:#A65E1E;--line:#F0E2CB;--radius:24px;--shadow:0 8px 26px rgba(190,130,60,.10);--topbar:var(--accent)}
+  /* 6 母婴亲子 */
+  body.t-mom{--bg:#FFF6F7;--panel:#FFFFFF;--ink:#3D3033;--sub:#8C7A80;--accent:#F2A9B4;--accent-bg:#FDEDF0;--accent-ink:#B56B7A;--line:#F5E3E7;--radius:32px;--shadow:0 8px 26px rgba(230,160,175,.12);--topbar:var(--accent)}
+  /* 7 健身运动（深色） */
+  body.t-fitness{--bg:#1F2124;--panel:#2A2D31;--ink:#FFFFFF;--sub:#A7ADB3;--accent:#C8F04A;--accent-bg:#2C331F;--accent-ink:#C8F04A;--line:#3A3E43;--radius:12px;--shadow:none;--topbar:var(--accent)}
+  /* 8 旅行/本地生活 */
+  body.t-life{--bg:#F7FBFF;--panel:#FFFFFF;--ink:#1F2A33;--sub:#6B7C88;--accent:#5AA9C9;--accent-bg:#EAF5FB;--accent-ink:#2E7A9B;--line:#DFECF4;--radius:18px;--shadow:0 6px 24px rgba(90,169,201,.12);--topbar:var(--accent)}
+  /* 9 教育学习 */
+  body.t-edu{--bg:#F8FAFD;--panel:#FFFFFF;--ink:#1E2A38;--sub:#67788A;--accent:#4A7FB5;--accent-bg:#EDF3FA;--accent-ink:#2F5D8C;--line:#E1EAF3;--radius:10px;--shadow:none;--topbar:var(--accent)}
+  /* 10 金融/房产/保险（深色） */
+  body.t-finance{--bg:#0F2740;--panel:#16334F;--ink:#FFFFFF;--sub:#9FB3C8;--accent:#D4AF6A;--accent-bg:#1E3A56;--accent-ink:#D4AF6A;--line:#23486B;--radius:8px;--shadow:none;--topbar:var(--accent)}
+  /* 11 情感心理 */
+  body.t-emotion{--bg:#F7F4FA;--panel:#FFFFFF;--ink:#38313F;--sub:#7B7183;--accent:#A98CC4;--accent-bg:#F2ECF8;--accent-ink:#7A5C99;--line:#EAE3F2;--radius:26px;--shadow:0 8px 30px rgba(169,140,196,.12);--topbar:var(--accent)}
+  /* 12 非遗文创手作 */
+  body.t-craft{--bg:#F7F1E5;--panel:#FDFAF2;--ink:#2B2118;--sub:#7A6A57;--accent:#B03A2E;--accent-bg:#F6E7E3;--accent-ink:#96332A;--line:#E5D9C4;--radius:4px;--shadow:none;--topbar:var(--accent);--serif:1}
+  /* 13 生鲜农产 */
+  body.t-fresh{--bg:#FCFAF3;--panel:#FFFFFF;--ink:#2F3A2B;--sub:#75806D;--accent:#6E9E5A;--accent-bg:#EDF5E8;--accent-ink:#4C7239;--line:#E5E9DE;--radius:18px;--shadow:0 6px 22px rgba(110,158,90,.10);--topbar:var(--accent)}
+
+  /* ---------- 敏感品类 5 套（走氛围，不碰功效/诊断/身体特写） ---------- */
+  /* A 国学/命理/八字 → 东方美学·文化知识 */
+  body.t-guoxue{--bg:#F7F1E5;--panel:#FDFAF2;--ink:#2B2118;--sub:#7A6A57;--accent:#B03A2E;--accent-bg:#F4E9E4;--accent-ink:#96332A;--line:#E5D9C4;--radius:4px;--shadow:none;--topbar:var(--accent);--serif:1}
+  /* B 男性私密 → 成熟男士生活方式（深色） */
+  body.t-male{--bg:#1C2733;--panel:#243140;--ink:#FFFFFF;--sub:#9AA7B4;--accent:#9AA7B4;--accent-bg:#2B3949;--accent-ink:#C7D2DC;--line:#334254;--radius:8px;--shadow:none;--topbar:var(--accent)}
+  /* C 女性私密 → 悦己·身体感受 */
+  body.t-female{--bg:#F6EEF0;--panel:#FFFFFF;--ink:#6E5F68;--sub:#9C8E96;--accent:#C9A9B4;--accent-bg:#FAF1F4;--accent-ink:#A57D8C;--line:#EFE1E6;--radius:30px;--shadow:0 8px 26px rgba(201,169,180,.14);--topbar:var(--accent)}
+  /* D 医美 → 高级感·轮廓美学 */
+  body.t-medical{--bg:#FDFDFE;--panel:#FFFFFF;--ink:#3A3D42;--sub:#8A8F98;--accent:#C7B49A;--accent-bg:#F7F3EC;--accent-ink:#9E8A6D;--line:#ECEDEF;--radius:6px;--shadow:none;--topbar:var(--accent);--serif:1}
+  /* E 保健养生 → 日常养生·生活方式 */
+  body.t-health{--bg:#FAF9F2;--panel:#FFFFFF;--ink:#3E5646;--sub:#7A8A7C;--accent:#7FA26B;--accent-bg:#EEF4E9;--accent-ink:#557A41;--line:#E4E9DE;--radius:20px;--shadow:0 6px 22px rgba(127,162,107,.10);--topbar:var(--accent)}
+
+  /* ---------- 版式 ---------- */
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#DCDCE1;padding:24px;display:flex;flex-direction:column;gap:24px;align-items:center;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif}
+  .shot{
+    width:1080px;height:1440px;background:var(--bg);position:relative;overflow:hidden;
+    padding:150px 96px 200px;display:flex;flex-direction:column;   /* 四边安全留白 96px，底部 200px 留空 */
+  }
+  /* 顶部品牌细线 */
+  .shot::before{content:'';position:absolute;top:0;left:0;width:100%;height:10px;background:var(--topbar)}
+  /* 右上序号 */
+  .no{position:absolute;top:96px;right:96px;font-size:34px;color:var(--accent);font-weight:600;letter-spacing:1px}
+  /* 主标题 96px：缩略图也能读 */
+  h1{font-size:96px;line-height:1.28;letter-spacing:-2px;color:var(--ink);font-weight:800;margin-bottom:52px}
+  body.t-fashion h1,body.t-craft h1,body.t-medical h1,body.t-guoxue h1{letter-spacing:2px;font-weight:700}
+  h1 em{font-style:normal;color:var(--accent-ink);background:var(--accent-bg);padding:0 12px;border-radius:8px}
+  /* 副标题 46px */
+  .lead{font-size:46px;line-height:1.55;color:var(--sub);margin-bottom:60px}
+  /* 条目 52px */
+  ul{list-style:none;margin-top:8px}
+  li{font-size:52px;line-height:1.6;color:var(--ink);padding:30px 0;border-bottom:1px solid var(--line);
+     display:flex;gap:24px;align-items:flex-start}
+  li:last-child{border-bottom:0}
+  li b{color:var(--accent-ink);font-size:44px;flex:0 0 auto;padding-top:6px;min-width:60px}
+  /* 金句块 */
+  .quote{margin-top:auto;background:var(--accent-bg);border-left:10px solid var(--accent);
+    padding:44px 40px;border-radius:0 var(--radius) var(--radius) 0;font-size:50px;line-height:1.5;
+    color:var(--accent-ink);font-weight:600}
+  /* 大数字 */
+  .bignum{font-size:220px;font-weight:800;color:var(--accent-ink);line-height:1;letter-spacing:-6px;margin:36px 0}
+  .bignum small{font-size:64px;color:var(--sub);font-weight:600;letter-spacing:0;margin-left:12px}
+  /* 落款（底部 200px 安全区之下，弱化处理） */
+  .foot{position:absolute;bottom:76px;left:96px;right:96px;font-size:32px;color:var(--sub);opacity:.7;
+    display:flex;justify-content:space-between}
+
+  /* ---------- 安全区参考线（默认关闭；要检查时给 body 加 class="show-guides"） ---------- */
+  body.show-guides .shot::after{content:'';position:absolute;inset:96px 96px 200px 96px;
+    border:2px dashed rgba(255,0,80,.55);pointer-events:none;z-index:9}
+</style>
+</head>
+<body class="t-knowledge" data-page-node-id="oAYCzrEgcuEXniKZNXrnTz">
+
+<!-- ========== 01 封面 · 大字报（8-15 字最佳，最多 20 字，0.5 秒能懂） ========== -->
+<section class="shot" data-page-node-id="Eal7r9qrnAqHD9GHTd3Esh">
+  <div class="no" data-page-node-id="Te1SPuMiixjVSgO7HAAsGE">01</div>
+  <h1 data-page-node-id="qMzqi07TPREMN7X17PePCO">【大字报主标题<br data-page-node-id="6jZjhzaZRcC7Oej3zS1091"><em data-page-node-id="0pxTzVGVXLWExgYyWFAdIv">关键词高亮</em>】</h1>
+  <div class="lead" data-page-node-id="IfZsoA7oskpj2xNrG5AjPi">【一句副标题：人群 + 扎心现状】</div>
+  <div class="quote" data-page-node-id="85FzCJPdiZflM9s2f93rZh">【一句话钩子：看完你就想点进来】</div>
+  <div class="foot" data-page-node-id="VUAcDTg4LyH4o7WnDN2bIE"><span data-page-node-id="juBAoOOjp41QWDAVJ8Z2Gq">【账号名/人设】</span><span data-page-node-id="Bh2cN7nHKC8kEzcNi2tpPR">01 / 06</span></div>
+</section>
+
+<!-- ========== 02 痛点 · 共情卡（3 条真实处境） ========== -->
+<section class="shot" data-page-node-id="p2SAE2onWnApIgctHCkV0D">
+  <div class="no" data-page-node-id="W5lych2LuCVL6FfGGjR8Yg">02</div>
+  <h1 data-page-node-id="zeOhtdJTeHnsCfNFCs7YEV">【是不是<br data-page-node-id="Fzp6SdwcZuiFy4JtwHrQ3w">也这样？】</h1>
+  <ul data-page-node-id="vXueh3kxwey783oJafZGnK">
+    <li data-page-node-id="1AFgYHh1H6Aq4jHrJorIWu"><b data-page-node-id="idri2h725grrJDlLMSTCBU">01</b><span data-page-node-id="H0BwxVuFouEvmNJkXWRpxc">【用户处境一：描述具体场景，让人对号入座】</span></li>
+    <li data-page-node-id="TFVUWSjfUVqRahLAGv9g40"><b data-page-node-id="h3g6efFkW8G7eWLLxyHyyi">02</b><span data-page-node-id="2IWDGx0lVR0pDlZuPBMmld">【用户处境二】</span></li>
+    <li data-page-node-id="p0A079AaIOhFmURD5lFwRH"><b data-page-node-id="YpQtXW1udYyXdC8WgFuy07">03</b><span data-page-node-id="ISLr40AQKhg4jrGB58urP7">【用户处境三】</span></li>
+  </ul>
+  <div class="quote" data-page-node-id="QORaRBFB8HL3sHBkNAFxoc">【共情收尾：不是你的问题，是顺序错了】</div>
+  <div class="foot" data-page-node-id="ErDujANiwALIvCKdfIamvW"><span data-page-node-id="oDiOM6qui7iWd1CZWqFWZF">【账号名/人设】</span><span data-page-node-id="v3iUHomai94l01zq2xRZBZ">02 / 06</span></div>
+</section>
+
+<!-- ========== 03 拆解 · 认知卡（拆误区，树敌不打人） ========== -->
+<section class="shot" data-page-node-id="HMvxUflz7QVUtNlZzsN9KF">
+  <div class="no" data-page-node-id="ecqvnfVt5GrUrEMsJZXdH3">03</div>
+  <h1 data-page-node-id="CldjU0SFiPQsAwMvPAcvko">【为什么<br data-page-node-id="o7a774wGz67SgPU40Oep8a">你之前没做成】</h1>
+  <ul data-page-node-id="Z9kTg9ZzgVT9uyD8UiHUBz">
+    <li data-page-node-id="upPbBRc40VU88uySdP5wBW"><b data-page-node-id="8K1AOO54XLNc4WtTwXnY9r">✕</b><span data-page-node-id="OjsCfyJRpHHGBekze7ei1e">【误区一：大多数人都在做的错事】</span></li>
+    <li data-page-node-id="9OFRQdHiNdzzwjILk1ZoLr"><b data-page-node-id="FNwxm8YpDsaOciDvtOOyta">✕</b><span data-page-node-id="h8dpQAXh72A6WgEhKUhSyU">【误区二】</span></li>
+    <li data-page-node-id="y3fbACqy4h0Kz6ChFsObyQ"><b data-page-node-id="dpnWYMhiBqYEmRBilGm4VO">✕</b><span data-page-node-id="cE1zrVNSAIPdQUwRTvyq4b">【误区三】</span></li>
+  </ul>
+  <div class="quote" data-page-node-id="sGgQfWqT7CA9GYw6G2qBAq">【真正的原因：一句话点破，不点名任何公司】</div>
+  <div class="foot" data-page-node-id="o2dViEI5wZrRYOlv7DRNul"><span data-page-node-id="uQc8pokhvQLjO9UcG8i8kM">【账号名/人设】</span><span data-page-node-id="KeiJrE3r1ssj0TFWEJn5jw">03 / 06</span></div>
+</section>
+
+<!-- ========== 04 方法 · 干货卡（给 80%，留 20%） ========== -->
+<section class="shot" data-page-node-id="944Y8HA9LPflwD7HvyIkk8">
+  <div class="no" data-page-node-id="FN4O9NbY6YoVApGqGF3AbO">04</div>
+  <h1 data-page-node-id="4MIaUlu5NoUTUpWVTlp53i">【正确的<br data-page-node-id="GqToK8ZVKvVI1RTJn9jdAX">顺序是这样】</h1>
+  <ul data-page-node-id="yBtwmu3Q6KJy0MGHLwtxKT">
+    <li data-page-node-id="WlwGEmBQl8HjadLuq0r0qj"><b data-page-node-id="bGDowZJ0Da35QMPnu5PYop">①</b><span data-page-node-id="vStK61M3WJyv06oqjN2p54">【第一步：具体动作，不是概念】</span></li>
+    <li data-page-node-id="LX4ePPg5DbFT0QaT136Uha"><b data-page-node-id="Tk7zr0uhT0QURqJUCs1b69">②</b><span data-page-node-id="TCQfM67YahZEHB1vd38CEO">【第二步】</span></li>
+    <li data-page-node-id="FVUQOSEWXBFP2c945tYbhe"><b data-page-node-id="LlIkyfbEVJQtPDlh8EvhhI">③</b><span data-page-node-id="SvAuQ3TKRlgXFa6uLqlU4l">【第三步】</span></li>
+  </ul>
+  <div class="quote" data-page-node-id="9vb9LbYyaHCe5pNqfWjBdS">【最关键的其实是第 X 步——这部分展开讲太长，我整理好了】</div>
+  <div class="foot" data-page-node-id="cb61wE4Stl28YSj8M1qEjJ"><span data-page-node-id="W8LZE4EVfM4B85JzItDi3z">【账号名/人设】</span><span data-page-node-id="ccMf6KFEBWmBh9HAeLSWmS">04 / 06</span></div>
+</section>
+
+<!-- ========== 05 案例 · 证据卡（具体且够得着的数字） ========== -->
+<section class="shot" data-page-node-id="WACAYOzSPaSPXICCpENnWs">
+  <div class="no" data-page-node-id="h3jM0JWMHTDsX8fCGZIXwL">05</div>
+  <h1 data-page-node-id="homJ8E6D4nEn9I3tOzLy9C">【她/他做对了<br data-page-node-id="f9UBZJDlbudwBVuRIhemei">哪一步】</h1>
+  <div class="bignum" data-page-node-id="ZCY4mGykpEItaxHUpdBcXL">【数字】<small data-page-node-id="C5lJG7ZuSfOuNZou1lEwJp">【单位】</small></div>
+  <ul data-page-node-id="fIPqJudO4nyIxm0sJ08PvY">
+    <li data-page-node-id="3C2KiEdhwnjoKkTwy3W95t"><b data-page-node-id="XxNve2zKaqJ3RCtjMWrVG6">前</b><span data-page-node-id="KUg7ka0vBUZATjrnWaptcL">【开始时的具体状态：身份 + 低谷细节】</span></li>
+    <li data-page-node-id="wmjkmw16C616XQCzyIHnBh"><b data-page-node-id="XlkwCttRaZJZ2ezBiD9DJZ">后</b><span data-page-node-id="6FZcF4MTD13ucNy0GOrYjK">【现在的生活画面：时间 + 动作 + 感官】</span></li>
+  </ul>
+  <div class="quote" data-page-node-id="mlE9Y81dvYdd8Fm3jn204C">【一句点评：没有奇迹，只有顺序对了】</div>
+  <div class="foot" data-page-node-id="W2I2V0M3KRGzX17nuEwo9n"><span data-page-node-id="Y8hVCLPpTGn6X8BHLfLzGh">【账号名/人设】</span><span data-page-node-id="kHI6DD4Urhmx3X7GbM8K69">05 / 06</span></div>
+</section>
+
+<!-- ========== 06 钩子 · 行动卡（扣词留资） ========== -->
+<section class="shot" data-page-node-id="SIQwhUPxkbD8I35tIxp60D">
+  <div class="no" data-page-node-id="sBAPiisdouMjEFHc7UEGj7">06</div>
+  <h1 data-page-node-id="mqLHzszilUZcqsKRZA5QNt">评论区<br data-page-node-id="Xq7VfCfKGEsmvK58EqcPfb"><em data-page-node-id="c1ovPFTFuHnJ3aXwAa2pxC">扣【关键词】</em></h1>
+  <div class="lead" data-page-node-id="w89GthCkwDJlJG8Z7rPgXn">【完整版 / 自测清单 / 词库模板，发你】</div>
+  <ul data-page-node-id="8B1sFxoCgInMIysJPu1ep5">
+    <li data-page-node-id="uacIeqiNeyFfXcOPoheKDS"><b data-page-node-id="HhSjoyoa3kHXL5wLiuGW4g">✓</b><span data-page-node-id="vHkUHS8lOnDCLGpj48S8zK">【你会拿到什么一：具体的东西】</span></li>
+    <li data-page-node-id="nk9Lb0IPpA3rZzUeNv0eMQ"><b data-page-node-id="9iDQ4RXowIuDCvrzKSTYtn">✓</b><span data-page-node-id="REhQFHAL1Y0J0lb2AIxwnX">【你会拿到什么二】</span></li>
+    <li data-page-node-id="JFTbDqELwb2cOkXAmyY2H0"><b data-page-node-id="z99jj0AZijmYElOfrj2wwb">✓</b><span data-page-node-id="K9KnhehvJEDQ9xWxuVG0Sn">【你会拿到什么三】</span></li>
+  </ul>
+  <div class="quote" data-page-node-id="F7eFBcw4cV3zDXTyvGTdSY">【最后一句情绪收尾 + 提醒扣词】</div>
+  <div class="foot" data-page-node-id="29iAsHpXo24R3CH3vVmRPe"><span data-page-node-id="8EgI6j35urJAEwxub2K3kt">【账号名/人设】</span><span data-page-node-id="CI9Jzok0eBnYKG2uFRg7BS">06 / 06</span></div>
+</section>
+
+</body>
+</html>

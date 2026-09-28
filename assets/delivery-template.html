@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="zB5xScyEOHxAXcz6onx2jc">
+<head data-page-node-id="Dgb1FqIewXIE6byBh41K04">
+<meta charset="UTF-8" data-page-node-id="M6ASMD5CZtEUt4tKs0fOZU">
+<meta name="viewport" content="width=device-width, initial-scale=1" data-page-node-id="SJHJ7uVX2GGWgW1xtlSXaj">
+<title>小红书图文交付包</title>
+<style>
+  :root{
+    --bg:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --sub:#6E6E73;
+    --line:#E5E5EA; --gold:#C9A84C; --gold-bg:#FBF6E9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif;
+    line-height:1.7;padding:32px 20px 80px}
+  .wrap{max-width:960px;margin:0 auto}
+  header{margin-bottom:28px}
+  h1{font-size:26px;letter-spacing:-.4px;margin-bottom:6px}
+  .meta{color:var(--sub);font-size:13px}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:22px;margin-bottom:20px}
+  h2{font-size:17px;margin-bottom:14px;padding-left:10px;border-left:3px solid var(--gold)}
+  h2 span{font-size:12px;font-weight:400;color:var(--sub);margin-left:8px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}}
+  .shot{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+  .shot img{width:100%;display:block;background:#FAFAFA}
+  .shot .cap{padding:8px 10px;font-size:12px;color:var(--sub);border-bottom:1px solid var(--line)}
+  .shot .acts{display:flex;gap:6px;padding:8px 10px}
+  button{font:inherit;font-size:13px;cursor:pointer;border-radius:8px;
+    border:1px solid var(--line);background:#fff;color:var(--ink);padding:6px 12px;transition:.15s}
+  button:hover{border-color:var(--gold);color:#8A6D1F;background:var(--gold-bg)}
+  button.done{background:var(--gold);border-color:var(--gold);color:#fff}
+  .copybtn{flex:1}
+  .body-text{white-space:pre-wrap;font-size:15px;background:#FAFAFA;border:1px solid var(--line);
+    border-radius:10px;padding:16px;min-height:120px}
+  .tagbox{white-space:pre-wrap;font-size:15px;background:var(--gold-bg);border:1px solid var(--gold);
+    border-radius:10px;padding:14px;color:#8A6D1F}
+  .titlebox{border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:12px;background:#FCFCFD}
+  .titlebox.primary{background:var(--gold-bg);border-color:var(--gold)}
+  .titlebox .lab{font-size:12px;color:var(--sub);margin-bottom:6px}
+  .titlebox .txt{font-size:18px;font-weight:600;line-height:1.5}
+  .titlebox .acts{margin-top:10px;display:flex;gap:8px}
+  .acts{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+  .script{border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:12px;background:#FCFCFD}
+  .script .who{font-size:12px;color:var(--sub);margin-bottom:6px}
+  .script .say{font-size:15px;white-space:pre-wrap}
+  .script .acts{margin-top:10px;display:flex;gap:8px}
+  .checklist{font-size:14px}
+  .checklist div{padding:5px 0;border-bottom:1px dashed var(--line)}
+  .checklist div:last-child{border:0}
+  .warn{background:var(--gold-bg);border:1px solid var(--gold);border-radius:10px;
+    padding:14px;font-size:14px}
+  .topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+  .hint{font-size:12px;color:var(--sub);margin-top:8px}
+</style>
+</head>
+<body data-page-node-id="dDDQZDB14sWM33fcrZquyW">
+<div class="wrap" data-page-node-id="JOlePuccu4ZjAPCun4tAKH">
+
+  <header data-page-node-id="teVkAYwgJeQYhkfZE5KPPu">
+    <div class="topbar" data-page-node-id="sps3GPANBNkDCxKpEACGWB">
+      <div data-page-node-id="l6R34FGVWsRSNfi5DybkMT">
+        <h1 id="pkg-title" data-page-node-id="jwUOwlm0J9t83SAG9mEhrT">【标题写这里】</h1>
+        <div class="meta" id="pkg-meta" data-page-node-id="AOGEhxdAFKa6UDCzKv3tQh">行业 · 象限 · 用户阶段 · 发哪个号 · 视觉方案 · 生成日期</div>
+      </div>
+      <button onclick="copyText('pkg-full','btn-all')" id="btn-all" data-page-node-id="vBqdu9uL7O3oreNlRJNk4L">复制全部文案</button>
+    </div>
+  </header>
+
+  <!-- ============ 一、6 张贴图 ============ -->
+  <section data-page-node-id="6lHOgskNt9VMTbi97FNSdw">
+    <h2 data-page-node-id="SRxFPr5wtjGNWOsMMGpCMP">一、贴图 6 张<span data-page-node-id="hHDP5HRCmJsQD4x9LUIL9H">1080×1440（3:4）· 按 1→6 顺序上传 · 视觉方案：__</span></h2>
+    <div class="grid" id="shots" data-page-node-id="5B5CFx0uJpV5e5DfyJpSlH">
+
+      <div class="shot" data-page-node-id="AkBZEtlnN6HQ4wY9ZRsoad">
+        <img src="images/01-封面.png" alt="01 封面" data-shot="01" data-page-node-id="zUMxwRaPBMdHnce2ebMOfp">
+        <div class="cap" data-page-node-id="8uZpKpGfok0cBb5ZKGczCN">01 封面 · 大字报（≤20 字）</div>
+        <div class="acts" data-page-node-id="7za6dBt8o1bykJyPELwkjq">
+          <button class="copybtn" onclick="copyImage(this,'images/01-封面.png')" data-page-node-id="TDWfkAGs8dSD6kwLu45yiX">复制图片</button>
+          <button onclick="downloadImage('images/01-封面.png','01-封面.png')" data-page-node-id="LPt852RACivFI4JNmk1WJf">保存</button>
+        </div>
+      </div>
+
+      <div class="shot" data-page-node-id="k6RgY857FkxQNp3EmqH0jV">
+        <img src="images/02-痛点.png" alt="02 痛点" data-shot="02" data-page-node-id="DaxWJ1eJBrlGmlRkgwMLWq">
+        <div class="cap" data-page-node-id="zxpximrNEgkEykteGdey1C">02 痛点 · 共情卡（3 条处境）</div>
+        <div class="acts" data-page-node-id="mH5ubPxEet0niukXmjUpvt">
+          <button class="copybtn" onclick="copyImage(this,'images/02-痛点.png')" data-page-node-id="zDyMhEhOsZCrTFhhKDIzxa">复制图片</button>
+          <button onclick="downloadImage('images/02-痛点.png','02-痛点.png')" data-page-node-id="JkCpMmce6o8X0ITtXApn6F">保存</button>
+        </div>
+      </div>
+
+      <div class="shot" data-page-node-id="YP01HiKt8kstxchcv423eR">
+        <img src="images/03-拆解.png" alt="03 拆解" data-shot="03" data-page-node-id="kejGG0AC2W63XD6CX5bT18">
+        <div class="cap" data-page-node-id="6UVZrnQncTsko5MBiVel2a">03 拆解 · 认知卡（拆误区）</div>
+        <div class="acts" data-page-node-id="F7WfO0uQA3gDxVN7LlFcBd">
+          <button class="copybtn" onclick="copyImage(this,'images/03-拆解.png')" data-page-node-id="2skzTma3Ths7RaQLHygb26">复制图片</button>
+          <button onclick="downloadImage('images/03-拆解.png','03-拆解.png')" data-page-node-id="V7kNyDddnZPAsj4E3wBnfv">保存</button>
+        </div>
+      </div>
+
+      <div class="shot" data-page-node-id="7fmwe1HalNlzMgmk2xUplw">
+        <img src="images/04-方法.png" alt="04 方法" data-shot="04" data-page-node-id="AVGiUnhSP4odjoWlPlGk2u">
+        <div class="cap" data-page-node-id="dYMSWkOBmZEub8WJTwBxMm">04 方法 · 干货卡（给 80% 留 20%）</div>
+        <div class="acts" data-page-node-id="yvMbnZXA1DCK9lL3dUB077">
+          <button class="copybtn" onclick="copyImage(this,'images/04-方法.png')" data-page-node-id="Sym03boq6ztLDdBxcVXfV6">复制图片</button>
+          <button onclick="downloadImage('images/04-方法.png','04-方法.png')" data-page-node-id="6i3nZLlqjMzQ9avsKquvCL">保存</button>
+        </div>
+      </div>
+
+      <div class="shot" data-page-node-id="5wB3UrStpYkw8GLRv9Wknq">
+        <img src="images/05-案例.png" alt="05 案例" data-shot="05" data-page-node-id="20lH5Ro6MNtfI6agwjj5BX">
+        <div class="cap" data-page-node-id="9uC3UUTTex1vl8VAdRwNXX">05 案例 · 证据卡（具体数字）</div>
+        <div class="acts" data-page-node-id="2BHKZcSsMKAtdoIZrZb0Qq">
+          <button class="copybtn" onclick="copyImage(this,'images/05-案例.png')" data-page-node-id="EWJWzr0C7O9TxwE1XC6kmq">复制图片</button>
+          <button onclick="downloadImage('images/05-案例.png','05-案例.png')" data-page-node-id="QhU5NByUaIgXBZXR966i45">保存</button>
+        </div>
+      </div>
+
+      <div class="shot" data-page-node-id="WNAVWc90r8cKuRrv0vzfGF">
+        <img src="images/06-钩子.png" alt="06 钩子" data-shot="06" data-page-node-id="DjtAl5oLmOqJU3P0dVZ8Dz">
+        <div class="cap" data-page-node-id="OaHgphJB2vUyiZWxQkdw2Z">06 钩子 · 行动卡（扣词留资）</div>
+        <div class="acts" data-page-node-id="vjpLr0Omd0NrnDDRPFrdcx">
+          <button class="copybtn" onclick="copyImage(this,'images/06-钩子.png')" data-page-node-id="CDtaqfqi7MKHJlGvtuz4mR">复制图片</button>
+          <button onclick="downloadImage('images/06-钩子.png','06-钩子.png')" data-page-node-id="0j49mSewC5eGVHd479GIQP">保存</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="hint" data-page-node-id="AOM2mCcwAtdqjx9iCl5fxN">一键复制全部 6 张说明见第五节；改视觉方案请改 shot-template.html 的 body class（见 reference 12）。</div>
+  </section>
+
+  <!-- ============ 二、标题 3 条（新增） ============ -->
+  <section data-page-node-id="85DUFF2NLhEpr5oApaQs9X">
+    <h2 data-page-node-id="mi599v4JV7tWmUtEORFMDw">二、标题 3 条<span data-page-node-id="QoWiPjddVSpVjTqxjt6REg">主推 1 条 + 备选 2 条（搜索型 / 痛点型 / 反常识型）· 每条单独一键复制</span></h2>
+
+    <div class="titlebox primary" data-page-node-id="5xH2eHIcLEVnuFsQSFABdt">
+      <div class="lab" data-page-node-id="qttieafQxOW1r25SPsdr2J">① 主推标题（≤20 字，信息流可读）</div>
+      <div class="txt" id="t1" data-page-node-id="COFdn1VTGeR8sF5Lioaqpb">【主推标题写这里】</div>
+      <div class="acts" data-page-node-id="G2NYpqaZuvZBUVmDz0wY2F"><button onclick="copyText('t1','bt1')" id="bt1" data-page-node-id="IW1kSHFgMBYtEK6Y4NW4LZ">复制主标题</button></div>
+    </div>
+
+    <div class="titlebox" data-page-node-id="wTh8BJg0f62xuuIH6jE7bA">
+      <div class="lab" data-page-node-id="6KwZmCnQs8IHdiKEYGhM4D">② 备选标题 A</div>
+      <div class="txt" id="t2" data-page-node-id="nzLd8X80XuCccLUFZchnEo">【备选标题 A：换角度 / 换人群 / 换数字】</div>
+      <div class="acts" data-page-node-id="2rOUx3FU9LEyMY5tE5BDyU"><button onclick="copyText('t2','bt2')" id="bt2" data-page-node-id="FlZ8iP4pSJYxv8lWG1XyNP">复制</button></div>
+    </div>
+
+    <div class="titlebox" data-page-node-id="TZ9zmlYN4LSRjwIueZ38tj">
+      <div class="lab" data-page-node-id="fL9bF7B1XpHtUDdOoF3baN">③ 备选标题 B</div>
+      <div class="txt" id="t3" data-page-node-id="EB9GlUKO9AfZAwp8mc2Pfn">【备选标题 B】</div>
+      <div class="acts" data-page-node-id="kDnym37ItF7FLQeoAqkbik"><button onclick="copyText('t3','bt3')" id="bt3" data-page-node-id="nWvYFJsurBqwqWYm8xVMT2">复制</button></div>
+    </div>
+
+    <div class="acts" data-page-node-id="aZYhrLDEyCv9EEAcpDqQXI"><button onclick="copyText('t-all','bt-all')" id="bt-all" data-page-node-id="eJSlPpU5K09T1eFbX6ZlCD">一键复制全部 3 条标题</button></div>
+    <div id="t-all" style="display:none" data-page-node-id="ODpiPNLEQjfOn5pAfaYoML">主推：【主推标题写这里】
+备选A：【备选标题 A】
+备选B：【备选标题 B】</div>
+  </section>
+
+  <!-- ============ 三、正文 ============ -->
+  <section data-page-node-id="AYZseQyg55dqPu4EGGJEjd">
+    <h2 data-page-node-id="2OlfJAXDzrOcenOk7SEvhz">三、正文<span data-page-node-id="1pYFFuHuXSY6UzccLxHvyC">圈人 → 共情树敌 → 给方法（80%）→ 案例（数字+画面）→ 争议收尾 → 扣词钩子</span></h2>
+    <div class="body-text" id="post-body" data-page-node-id="Of861t3hM6Kcj7Nsddb97G">【正文写这里】</div>
+    <div class="acts" data-page-node-id="1hUydwM3pfzgICAmGkoXDi">
+      <button onclick="copyText('post-body','btn-body')" id="btn-body" data-page-node-id="9S8gW6oHyFzrPo9rsxXyaL">一键复制正文</button>
+      <button onclick="copyText('post-all','btn-postall')" id="btn-postall" data-page-node-id="tu9vYtbrVQfI0PFIZQ5wYC">复制标题+正文+话题</button>
+    </div>
+  </section>
+
+  <!-- ============ 四、话题（新增） ============ -->
+  <section data-page-node-id="Rhz4ACGoBXtCLvfTdBgWaq">
+    <h2 data-page-node-id="Fq00Ei926SSCDvztLWBRf6">四、适配话题<span data-page-node-id="0yDECDyGDSMxkkEXn7gYLL">8-10 个：大流量泛词 2-3 + 精准人群词 3-4 + 品类/长尾搜索词 2-3 · 一键复制</span></h2>
+    <div class="tagbox" id="post-tags" data-page-node-id="uvdYa7Vr5N86BjxvvquUta">#话题1 #话题2 #话题3 #话题4 #话题5 #话题6 #话题7 #话题8</div>
+    <div class="acts" data-page-node-id="PIZVp1BndXAvnml6BWTpME">
+      <button onclick="copyText('post-tags','btn-tags')" id="btn-tags" data-page-node-id="KIzJuRGE5ATwCHhwBGbElt">一键复制话题</button>
+      <button onclick="copyText('post-tags-n','btn-tagsn')" id="btn-tagsn" data-page-node-id="LrzclAN7BOdRLvaYTADlLt">复制（不带 #）</button>
+    </div>
+    <div id="post-tags-n" style="display:none" data-page-node-id="IrnHMHkEXqYpGaVCkCL0G1">话题1 话题2 话题3 话题4 话题5 话题6 话题7 话题8</div>
+    <div class="hint" data-page-node-id="yYoDO9eJBYGD2gGFS7oH73">话题已按[09]做过合规筛查：不含敏感品类词、绝对化用语与导流词。</div>
+  </section>
+
+  <!-- ============ 五、评论区脚本 5 份 ============ -->
+  <section data-page-node-id="GQbkLWtR8zi8qWaSGsWNHw">
+    <h2 data-page-node-id="zBhLgs804kEOt0Efx3T8tC">五、评论区脚本 5 份<span data-page-node-id="Y5HIqWht67Th63K1MzsOqE">发布后按时点执行 · 水军号须不同设备</span></h2>
+
+    <div class="script" data-page-node-id="EAear48G3LKsPTOX8uHHAW">
+      <div class="who" data-page-node-id="2TGOWAqxk7YN6HBxhQ2LLD">① 置顶预埋 · 发布后 30 分钟内 · 主号</div>
+      <div class="say" id="s1" data-page-node-id="w9qeLJC2AQMF7Vmyf76IH4">【一句干货断言 / 低门槛入口】</div>
+      <div class="acts" data-page-node-id="0PnnArxLWbk8RazZkLFofx"><button onclick="copyText('s1','b1')" id="b1" data-page-node-id="spQM397LRtG5LRPfd2XYLN">复制</button></div>
+    </div>
+
+    <div class="script" data-page-node-id="gf132lOqcIEue9xbq0EFbP">
+      <div class="who" data-page-node-id="f3YKDHjZmiIDLWskLZEfrO">② 小号 A · 求带 · 1-2 分钟 · 水军号</div>
+      <div class="say" id="s2" data-page-node-id="gHFG7YT9AP1IkwV3KyHIBE">【求带 / 扣词】</div>
+      <div class="acts" data-page-node-id="hmTqW1pwvM7kdByzykO9s7"><button onclick="copyText('s2','b2')" id="b2" data-page-node-id="98bWR7xORVx7YEoCkx17Jj">复制</button></div>
+    </div>
+
+    <div class="script" data-page-node-id="22gbWm7JKNllVRHZdC45FE">
+      <div class="who" data-page-node-id="ARffO10HJplX0kLMONSg70">③ 小号 B · 证言 · 5-8 分钟 · 水军号</div>
+      <div class="say" id="s3" data-page-node-id="f2CBk1LuKIKBk9HEJXzVbJ">【扮演已购学员给好评】</div>
+      <div class="acts" data-page-node-id="Es5HxQxPvtU4zCA1WPZOU6"><button onclick="copyText('s3','b3')" id="b3" data-page-node-id="T2xF7xze7s1K5qdr3EFjL7">复制</button></div>
+    </div>
+
+    <div class="script" data-page-node-id="XzysxgXAg3i7WtCDdiDh99">
+      <div class="who" data-page-node-id="kALKY8EtbzFJvlk0ZVOi3K">④ 追问 · 2 小时后 · 水军号或主号</div>
+      <div class="say" id="s4" data-page-node-id="zxhp8uKC5I0BiVG2pBNvEQ">【追加一条拉互动】</div>
+      <div class="acts" data-page-node-id="vRlThpOG69O84RS3aRJrIs"><button onclick="copyText('s4','b4')" id="b4" data-page-node-id="tysFyAT22PwSD3zVU81jeY">复制</button></div>
+    </div>
+
+    <div class="script" data-page-node-id="qnuqskwmRQTCJqHACbiNi6">
+      <div class="who" data-page-node-id="ayOYamSDwXSYTl5CHN4cI9">⑤ 作者回复口径 · 用户留言后立刻 · 主号</div>
+      <div class="say" id="s5" data-page-node-id="pcnHeaJ49uy1JOqDXVssab">【公开回一句可感知的干货 + 引导私信；永远不公开报价】</div>
+      <div class="acts" data-page-node-id="fjLpTYqKdGyWurjELzViob"><button onclick="copyText('s5','b5')" id="b5" data-page-node-id="EpmwwOr4dGl9QpjCedD7nB">复制</button></div>
+    </div>
+
+    <div class="acts" data-page-node-id="X1sKhDWS6bMEkr6eeSXDiB"><button onclick="copyText('s-all','b-all')" id="b-all" data-page-node-id="ReY8mDwkqT7zzQA7o0ScQH">一键复制全部 5 份脚本</button></div>
+    <div id="s-all" style="display:none" data-page-node-id="nq5YheetAeyqSUnzqc6C3k">① 置顶预埋：【一句干货断言 / 低门槛入口】
+② 小号A 求带：【求带 / 扣词】
+③ 小号B 证言：【扮演已购学员给好评】
+④ 追问：【追加一条拉互动】
+⑤ 作者回复口径：【公开回干货 + 引导私信】</div>
+  </section>
+
+  <!-- ============ 六、自检结果 ============ -->
+  <section data-page-node-id="97CQMselZOYBzchbTm0cp6">
+    <h2 data-page-node-id="V1CeM4WmxCZFAFlVAKUNTh">六、交付前自检结果<span data-page-node-id="rWkLQGWvhnnhIWTjqfHA69">逐关打勾，有一项否即停</span></h2>
+    <div class="checklist" id="pkg-check" data-page-node-id="aTWzGEGOC4Rp2htqXegQyZ">
+      <div data-page-node-id="ar4xCjcuEbsU8XxlPWHll4">第一关 通用化与选题 ①②③④ ✅</div>
+      <div data-page-node-id="5w60zd8zJdeEMG2wTws6XC">第二关 合规 ⑤⑥⑦⑧⑨⑩ ✅</div>
+      <div data-page-node-id="g3Rbmv3g7S9fyEIxLDbK0f">第三关 内容 ⑪-⑮ ✅</div>
+      <div data-page-node-id="FdFqQ0VQWIBNibcS38r3ui">第四关 贴图与评论区 ⑯-㉒ ✅（含尺寸 3:4 / 安全区 / 品类视觉方案）</div>
+      <div data-page-node-id="1nsR9SFVM1T2Scdg9uFZ5K">第五关 交付包与纪律 ㉓-㉘ ✅（含标题与话题可复制）</div>
+    </div>
+    <div class="warn" style="margin-top:12px" id="pkg-warn" data-page-node-id="DHJ2Zk551JaRTxSkMfVofQ">
+      <b data-page-node-id="UAb7J6mBfsUzy2yUEnsGqk">报备项：</b>【有无法 100% 规避的风险点就写这里；没有就写"无"】
+    </div>
+  </section>
+
+  <!-- 隐藏：复制全部文案时取这段纯文本 -->
+  <div id="pkg-full" style="display:none" data-page-node-id="HpIult30WwX24BJ5unYomU">
+【主推标题】
+【备选标题A】
+【备选标题B】
+
+【正文】
+
+【话题】
+
+【评论区脚本】
+① 置顶预埋：
+② 小号A：
+③ 小号B：
+④ 追问：
+⑤ 回复口径：
+  </div>
+
+  <!-- 隐藏：标题+正文+话题 合并复制 -->
+  <div id="post-all" style="display:none" data-page-node-id="no2XLmPaiJmeeJraPGWUHE">【主推标题】
+
+【正文】
+
+【话题】</div>
+
+</div>
+
+<script>
+/* ========== 文本复制：优先 Clipboard API，file:// 下兜底 execCommand ========== */
+function copyText(sourceId, btnId){
+  var src = document.getElementById(sourceId);
+  if(!src){ alert('未找到内容：'+sourceId); return; }
+  var text = src.innerText;
+  var btn  = document.getElementById(btnId);
+  var done = function(ok){
+    if(!btn) return;
+    var old = btn.textContent;
+    btn.textContent = ok ? '已复制 ✓' : '复制失败，请手动选';
+    btn.classList.add('done');
+    setTimeout(function(){ btn.textContent = old; btn.classList.remove('done'); }, 1600);
+  };
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ fallback(); });
+  } else { fallback(); }
+
+  function fallback(){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.select();
+    var ok = false;
+    try{ ok = document.execCommand('copy'); }catch(e){ ok = false; }
+    document.body.removeChild(ta);
+    done(ok);
+  }
+}
+
+/* ========== 图片复制：ClipboardItem，失败自动降级为下载 ========== */
+function copyImage(btn, src){
+  var done = function(ok, msg){
+    var old = btn.textContent;
+    btn.textContent = ok ? '已复制 ✓' : (msg || '改点保存');
+    btn.classList.add('done');
+    setTimeout(function(){ btn.textContent = old; btn.classList.remove('done'); }, 1600);
+  };
+  if(!(navigator.clipboard && window.ClipboardItem)){ downloadImage(src); done(false,'已改为下载'); return; }
+  fetch(src)
+    .then(function(r){ return r.blob(); })
+    .then(function(blob){
+      var type = blob.type || 'image/png';
+      return navigator.clipboard.write([new ClipboardItem({ [type]: blob })]);
+    })
+    .then(function(){ done(true); })
+    .catch(function(){ downloadImage(src); done(false,'已改为下载'); });
+}
+
+function downloadImage(src, name){
+  var a = document.createElement('a');
+  a.href = src;
+  a.download = name || src.split('/').pop();
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+}
+</script>
+</body>
+</html>
