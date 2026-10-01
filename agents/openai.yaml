@@ -1,4 +1,4 @@
 interface:
-  display_name: "小红获客宝"
+  display_name: "小红炼金师"
   short_description: "小红书搜索获客、图文内容、钩子与交付包工作流"
-  default_prompt: "使用小红获客宝，为我的产品或服务创作一套完整的小红书搜索获客图文交付包。"
+  default_prompt: "使用小红炼金师，为我的产品或服务创作一套完整的小红书搜索获客图文交付包。"
