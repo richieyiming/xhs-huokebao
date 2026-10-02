@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-"""天赋说明书获客包 · 6 张贴图 v2
+"""自我认知练习获客包 · 6 张贴图 v2
 升级点：原创几何符号系统 + 深色封面 + 点阵底纹 + 金色光晕 + 大字号水印 + 圆形节点
 零命理符号：无罗盘/八卦/星象/掌纹/符咒，仅使用通用几何图形
 """
 import pathlib
 
-OUT = pathlib.Path("/tmp/tf-shots")
+OUT = pathlib.Path("output/skill-shots")
 OUT.mkdir(parents=True, exist_ok=True)
 
 CSS = """
@@ -126,7 +126,7 @@ ul.tl li .bub{position:absolute;left:0;top:50%;transform:translateY(-50%);margin
 body.dark .quote{border-left-color:var(--accent)}
 """
 
-ACCOUNT = "一铭 · 天赋说明书"
+ACCOUNT = "【账号名/人设】"
 
 # ============ 原创符号系统（纯几何，零命理） ============
 
@@ -196,7 +196,7 @@ SHOTS = []
 SHOTS.append(("dark", "cover", f"""  <div class="deco"></div>
   <div class="glow a"></div><div class="glow b"></div>
   <div class="ring"></div><div class="ring s"></div>
-  <div class="ctop"><i></i><span>天赋说明书 · 优势自测</span><i></i></div>
+  <div class="ctop"><i></i><span>自我认知练习 · 优势自测</span><i></i></div>
   <div class="emblem">{emblem()}</div>
   <h1>工作了5年<br>还是不知道<br>自己<em>适合什么</em></h1>
   <div class="rule"></div>
@@ -268,7 +268,7 @@ SHOTS.append(("", "tight", f"""  <div class="deco"></div><div class="glow a"></d
     <li><span class="bub k">✓</span><span class="tx">两个「假天赋」的坑</span></li>
     <li><span class="bub k">✓</span><span class="tx">我自己的答案样例</span></li>
   </ul>
-  <div class="getbar">{mark('card', 46)}<div><div class="t1">《天赋说明书 · 自测7问》</div><div class="t2">PDF 资料 · 看清楚自己再决定要不要改</div></div></div>
+  <div class="getbar">{mark('card', 46)}<div><div class="t1">《自我认知练习 · 自测7问》</div><div class="t2">PDF 资料 · 看清楚自己再决定要不要改</div></div></div>
   <div class="quote fill">先别急着改自己，先把自己看清楚</div>"""))
 
 TPL = """<!DOCTYPE html>

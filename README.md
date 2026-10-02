@@ -6,7 +6,7 @@
 
 新增近期有证据对标→拆模型→需求侧×供给侧→知识资产/产品卖点→原创图文→测试/回流；原6图、27入口、六关和品类资源保留。无数据明确待验证，不编爆款或客户证言。
 
-关联：[炼金师系列公开版](https://github.com/richieyiming/hot-script/tree/main/alchemy-skills)。公开包不依赖作者个人资料或私有知识库。
+关联：[炼金师系列公开版](https://github.com/richieyiming/hot-script#独立技能下载)。公开包不依赖作者个人资料或私有知识库。
 
 
 面向 Codex 的小红书搜索获客技能，覆盖业务诊断、关键词、选题、图文写作、六张贴图、留资钩子、评论私信承接和数据复盘。
@@ -41,3 +41,7 @@
 - `agents/openai.yaml`：Codex 界面元数据
 
 发布前请根据实际行业与当前平台规则复核合规要求。
+
+## 独立下载
+
+[下载小红炼金师 ZIP](https://github.com/richieyiming/xhs-huokebao/raw/refs/heads/main/downloads/xhs-huokebao.zip)，包内只有 `xhs-huokebao`。
